@@ -143,4 +143,73 @@ elif(opcion == 2):
     print(minusculas)
 else:
     primerLetra = nombre.title() 
-    print(primerLetra)         
+    print(primerLetra)     
+
+
+
+#9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la 
+# magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado 
+# por pantalla: 
+# ● Menor que 3: "Muy leve" (imperceptible). 
+# ● Mayor o igual que 3  y menor que 4: "Leve" (ligeramente perceptible). 
+# ● Mayor o igual que 4  y menor que 5: "Moderado" (sentido por personas, pero 
+# generalmente no causa daños). 
+# ● Mayor o igual que 5  y menor que 6: "Fuerte" (puede causar daños en estructuras 
+# débiles). 
+# ● Mayor o igual que 6  y menor que 7: "Muy Fuerte" (puede causar daños significativos). 
+# ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+magnitud = int(input("Ingrese magnitud del terremoto en escala de Richter"))
+
+
+if(magnitud < 3):
+    print("Muy leve (imperceptible)")
+elif(magnitud < 4):
+    print("Leve")
+elif(magnitud < 6):
+    print(" Fuerte")
+elif(magnitud < 7):
+    print(" Muy fuerte")
+else:
+    print("Extremo")     
+
+
+
+ # 10)
+
+
+hemisferio = input(" Indique en cuál hemisferio se encuentra (N/S) ")
+
+mes = int(input("Indique mes del año en que se encuentra en formato numero ejemplo 6 "))
+dia = int(input("Indique dia del año en que se encuentra por ejemplo si es 21 de marzo poner solo 21 "))
+
+
+
+    
+if((mes == 12 and dia >= 21) or mes == 1 or mes == 2  or (mes == 3 and dia <= 20)): 
+    estacionN = "Invierno"
+    estacionS = "Verano"
+
+
+elif ((mes == 3 and dia >= 21) or mes == 4 or mes == 5 or (mes == 6 and dia <=20 )):
+    estacionN = "Primavera"
+    estacionS = "Otoño"      
+elif((mes == 6 and dia >= 21) or mes == 7 or mes == 8 or (mes == 9 and dia <= 20)):
+     estacionN = "Verano"
+     estacionS = "Invierno"
+
+elif((mes == 9 and dia >= 21 ) or mes == 10 or mes == 11 or (mes == 12 and dia <= 20)):
+   
+    estacionN ="Otoño"
+    estacionS = "Primavera"                           
+else:
+    print("Por favor ingrese una fecha valida")
+
+hemisferio2 = hemisferio.upper()
+if(hemisferio2 == "N"):
+    print(estacionN)
+else:
+    print(estacionS)        
+
+
+                      
