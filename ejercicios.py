@@ -1,17 +1,11 @@
-#2) Desarrolla un programa que solicite al usuario un número entero y determine la cantidad de
-#dígitos que contiene.
 
 
-num = int(input("Ingrese un numero entero"))
-cantDigito = 0
+num1 = int(input("Ingrese un numero entero"))
+num2 = int(input("Ingrese otro numero entero"))
 
-while(num > 0):
-        
-        digito = num % 10
+sum = 0
 
-        cantDigito += 1
+for i in range(num1 + 1,num2, 1):
+    sum += i
 
-        num = num//10
-
-
-print(f"La cantidad de digitos que contiene el numero ingresado es {cantDigito}")
+print(f"La suma de los numeros enteros entre {num1} y {num2} es {sum}")
