@@ -1,11 +1,12 @@
+#7
 
 
-num1 = int(input("Ingrese un numero entero"))
-num2 = int(input("Ingrese otro numero entero"))
+num = int(input("Ingreseun numero positivo"))
 
 sum = 0
-
-for i in range(num1 + 1,num2, 1):
-    sum += i
-
-print(f"La suma de los numeros enteros entre {num1} y {num2} es {sum}")
+if num < 0:
+    num = int(input("Incorrecto. Vuelva a ingresar un numero positivo. "))
+else:
+    for i in range(0,num + 1 ,1):
+        sum += i
+    print(f"La suma de los numeros enteros positivos hasta {num} es {sum}")        

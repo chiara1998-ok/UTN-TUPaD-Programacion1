@@ -41,3 +41,60 @@ for i in range(num1 + 1,num2, 1):
     sum += i
 
 print(f"La suma de los numeros enteros entre {num1} y {num2} es {sum}")
+
+
+
+#4
+
+sum = 0
+num = int(input("Ingrese un numero o aprete 0 para salir: "))
+while(num != 0):
+    sum += num
+    num = int(input("Ingrese un numero o aprete 0 para salir: "))
+
+    
+
+
+print(f"El total acumulado es {sum}")
+
+
+# 5
+import random
+
+intentos = 1
+
+num_aleatorio = random.randint(0, 10) 
+
+
+numIngresado = int(input("Ingrese un numero entre 0 y 9: "))
+
+while(numIngresado != num_aleatorio):
+
+    intentos += 1
+    numIngresado = int(input("Numero incorrecto, ingrese otro numero entre 0 y 9: "))
+
+
+print(f"Felicidades, ha adivinado el numero {num_aleatorio} en {intentos} intentos")    
+
+
+
+
+#6 
+
+for i in range(100,-1,-2):
+    print(i)
+
+
+
+#7
+
+
+num = int(input("Ingreseun numero positivo"))
+
+sum = 0
+if num < 0:
+    num = int(input("Incorrecto. Vuelva a ingresar un numero positivo. "))
+else:
+    for i in range(0,num + 1 ,1):
+        sum += i
+    print(f"La suma de los numeros enteros positivos hasta {num} es {sum}")            
