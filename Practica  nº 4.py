@@ -97,4 +97,58 @@ if num < 0:
 else:
     for i in range(0,num + 1 ,1):
         sum += i
-    print(f"La suma de los numeros enteros positivos hasta {num} es {sum}")            
+    print(f"La suma de los numeros enteros positivos hasta {num} es {sum}")        
+
+
+#8
+
+contNegativo = 0
+contPositivo = 0
+contPar = 0
+contImpar = 0
+
+
+for i in range(1, 101):
+    num = int(input(f"Ingrese un numero entero "))
+
+    if(num < 0):
+        contNegativo += 1
+
+    if(num > 0):
+        contPositivo += 1
+    if(num %2 == 0):
+        contPar += 1
+    elif(num %2 != 0):
+        contImpar += 1
+
+print(f"Se ingresaron {contNegativo} numeros negativos, {contPositivo} numeros positivos, {contPar} numeros pares y {contImpar} numeros impares")                    
+
+
+#9
+from statistics import mean 
+
+numeros = []
+for i in range(1,101):
+
+    num = int(input("Ingrese un numero entero  "))
+
+    numeros.append(num)
+
+mean_value = mean(numeros)
+
+print(f"La media de los numeros ingresados es {mean_value}")
+
+
+#10
+
+num= int(input("Ingrese un numero entero "))
+invertido = 0
+
+while(num > 0):
+    digito = num % 10
+
+    invertido = (invertido * 10) + digito
+
+    num = num // 10
+    
+print(invertido)    
