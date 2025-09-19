@@ -1,22 +1,23 @@
-#2
+#3
 
 
 
-list = []
+import random
+listPares = []
+listImpares = []
+contPares = 0
+contImpares = 0
 
-for i in range(5):
-    producto = input("Ingrese un producto: ")
+for i in range(15):
+    numAleatorio = random.randint(0, 100)
+    if(numAleatorio % 2 == 0):
+        listPares.append(numAleatorio)
+        contPares += 1
+    else:
+        listImpares.append(numAleatorio)
+        contImpares += 1
 
-    list.append(producto)
-    
-
-list.sort()   
-print(list[0:len(list)])     
-
-eliminar = input("Ingrese un producto a eliminar: ")
-if eliminar in list:
-    list.remove(eliminar)
-    print(f"Producto {eliminar} eliminado.")
-    print(f"Lista actualizada: {list[0:len(list)]}")
-else:
-    print(f"Producto {eliminar} no encontrado.")
+print(f"Números pares: {listPares}")
+print(f"Números impares: {listImpares}")
+print(f"Cantidad de números pares: {contPares}")
+print(f"Cantidad de números impares: {contImpares}")
