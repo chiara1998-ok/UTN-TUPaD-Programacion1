@@ -52,7 +52,7 @@ contPares = 0
 contImpares = 0
 
 for i in range(15):
-    numAleatorio = random.randint(0, 100)
+    numAleatorio = random.randint(1, 100)
     if(numAleatorio % 2 == 0):
         listPares.append(numAleatorio)
         contPares += 1
@@ -64,3 +64,16 @@ print(f"Números pares: {listPares}")
 print(f"Números impares: {listImpares}")
 print(f"Cantidad de números pares: {contPares}")
 print(f"Cantidad de números impares: {contImpares}")
+
+
+#4
+
+
+datos = [1,3,5,3,7,1,9,5,3]
+
+
+
+
+sinRepetidos = list(set(datos))
+sinRepetidos.sort()
+print(sinRepetidos)
