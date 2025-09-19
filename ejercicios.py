@@ -1,11 +1,13 @@
-#3
+list = [7,8,9,10,5,7,8]
+print(list[0:len(list)])
+#Guardamos la cantidad de elementos de la lista
+cantElementos = len(list)
+
+ultimo = list[cantElementos - 1]
+
+for i in range(cantElementos - 1, 0, -1):
+    list[i] = list[i - 1]
 
 
-datos = [1,3,5,3,7,1,9,5,3]
-
-
-
-
-sinRepetidos = list(set(datos))
-sinRepetidos.sort()
-print(sinRepetidos)
+list[0] = ultimo                        
+print(list[0:len(list)])        #Imprimimos la lista rotada
