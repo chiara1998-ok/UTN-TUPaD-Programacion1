@@ -1,13 +1,18 @@
-list = [7,8,9,10,5,7,8]
-print(list[0:len(list)])
-#Guardamos la cantidad de elementos de la lista
-cantElementos = len(list)
+#7
+diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+listTemperatura = [
 
-ultimo = list[cantElementos - 1]
+    [18,37],
+    [20,38],                        
+    [19,35],
+    [17,34],
+    [15,33],
+    [14,32],
+    [13,31],
+    
+]
 
-for i in range(cantElementos - 1, 0, -1):
-    list[i] = list[i - 1]
-
-
-list[0] = ultimo                        
-print(list[0:len(list)])        #Imprimimos la lista rotada
+sumMaximas = ()
+sumMinimas = ()
+diaMaxima = ""
+tempMaxima = 0  
