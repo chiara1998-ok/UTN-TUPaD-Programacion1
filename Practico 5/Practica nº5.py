@@ -118,3 +118,79 @@ for i in range(cantElementos - 1, 0, -1):
 
 list[0] = ultimo                        
 print(list[0:len(list)])        #Imprimimos la lista rotada
+
+
+
+#7
+
+diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+listTemperatura = [
+    [18,37],
+    [20,38],                        
+    [19,35],
+    [17,34],
+    [15,33],
+    [14,32],
+    [13,31],
+]
+
+sumMaximas = 0
+sumMinimas = 0
+mayorAmplitud = -1
+indiceMayor = -1
+
+for i in range(7):
+    sumMinimas += listTemperatura[i][0]
+    sumMaximas += listTemperatura[i][1]
+
+
+
+promMax = sumMaximas / 7
+promMin = sumMinimas / 7
+
+
+for i in range(7):
+    min_dia = listTemperatura[i][0]
+    max_dia = listTemperatura[i][1]
+
+    amplitud = max_dia - min_dia
+
+    if amplitud > mayorAmplitud:
+        mayorAmplitud = amplitud
+        indiceMayor = i
+
+print(f"La mayor amplitud térmica de la semana fue de {mayorAmplitud} el día {diasSemana[indiceMayor]}")
+print(f"La temperatura media mínima de la semana fue de {round(promMin,2)}")
+print(f"La temperatura media máxima de la semana fue de {round(promMax,2)}")
+
+
+
+#8
+
+
+materias = ["Matematica","Fisica","Quimica"]
+estudiantes = ["Juan","Maria","Pedro","Ana","Luis"]
+notas = [
+    [8, 9, 7],  # Notas de Juan
+    [8, 9, 8],  # Notas de Maria
+    [7, 8, 8],  # Notas de Pedro
+    [9, 9, 8],  # Notas de Ana
+    [7, 7, 8]   # Notas de Luis
+]
+sum = 0
+promedio = 0
+
+
+
+for i in range(5):
+        sum = notas[i][0] + notas[i][1] + notas[i][2]
+        promedio = (sum / 3)
+        print(f"El promedio de {estudiantes[i]} es: {promedio}")#1
+
+
+for j in range(3):
+        sum = 0
+        for i in range(5):
+                sum += notas[i][j]
+        promedio = sum / 5
+        print(f"El promedio de {materias[j]} es: {promedio}")#2 
