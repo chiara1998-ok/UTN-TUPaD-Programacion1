@@ -17,6 +17,9 @@ ventas = [
 suma = 0
 
 
-for j in range(4):
-    for i in range(7):
-        ventas[j] += suma
+for i in range(4):
+    sum = 0
+    for j in range(7):
+        sum += ventas[j][i]
+
+    print(f"El total por cada {producto[i]} es {sum}")
