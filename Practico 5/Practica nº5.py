@@ -194,3 +194,65 @@ for j in range(3):
                 sum += notas[i][j]
         promedio = sum / 5
         print(f"El promedio de {materias[j]} es: {promedio}")#2 
+
+
+
+#9
+lista = [
+    ["-", "-", "-"],
+    ["-", "-", "-"],
+    ["-", "-", "-"]
+]
+
+while True:
+    
+    
+        fila = int(input("Fila (0,1,2): "))
+        columna = int(input("Columna (0,1,2): "))
+   
+
+        opcion = input("Símbolo (X/O): ").strip().upper()
+        if opcion not in ("X", "O"):
+            print("Usa X u O.")
+            continue
+
+        if fila not in (0,1,2) or columna not in (0,1,2):
+            print("Fuera de rango (0,1,2).")
+            continue
+
+        if lista[fila][columna] != "-":
+            print("Ese lugar está ocupado.")
+            continue
+
+        # colocar jugada
+        lista[fila][columna] = opcion
+
+        # mostrar tablero
+        for r in lista:
+            print(r)
+
+        # ---- comprobar FILA ----
+        completa_fila = True
+        j = 0
+        while j < 3:
+            if lista[fila][j] != opcion:
+                completa_fila = False
+                break
+            j += 1
+
+        # ---- comprobar COLUMNA ----
+        completa_columna = True
+        i = 0
+        while i < 3:
+            if lista[i][columna] != opcion:
+                completa_columna = False
+                break
+            i += 1
+
+        # finalizar si hay fila o columna completa
+        if completa_fila or completa_columna:
+            if completa_fila:
+                print(f"¡{opcion} completó una fila! Fin del juego.")
+            else:
+                print(f"¡{opcion} completó una columna! Fin del juego.")
+            break
