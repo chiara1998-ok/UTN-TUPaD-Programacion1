@@ -1,19 +1,17 @@
 
-#4
-import math
-def calcular_area_circulo(radio):
-    area = math.pi * radio ** 2
-    return area
+#10
 
-def calcular_perimetro_circulo(radio):
-    perimetro = 2 * math.pi * radio
-    return perimetro
+
+def calcular_promedio(a,b,c):
+    promedio = (a + b + c) / 3
+    return promedio
+
+
 
 
 #Programa principal
-radio = float(input("Ingresa el radio del círculo: "))
-area = calcular_area_circulo(radio)
-perimetro = calcular_perimetro_circulo(radio)
-
-print(f"Área: {area}")
-print(f"Perímetro: {perimetro}")
+num1 = float(input("Ingrese el primer numero: "))
+num2 = float(input("Ingrese el segundo numero: "))
+num3 = float(input("Ingrese el tercer numero: "))
+promedio = calcular_promedio(num1, num2, num3)
+print(f"El promedio de los numeros ingresados es: {promedio}")
