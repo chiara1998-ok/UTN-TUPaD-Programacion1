@@ -1,16 +1,19 @@
-#3
+#5
 
 
-def potencia(n,m):
-    
-    if m==0:
-        return 1
+def suma_digitos(num):
+
+    if num <= 0:
+        return 0
     else:
-        return n * potencia(n, m-1)
+         digito_anterior = num % 10
+       
+         
+         return  digito_anterior +  suma_digitos(num//10) 
 
 
 
-num_ingresado = int(input("Ingrese la base: "))
-exponente_ingresado = int(input("Ingrese el exponente: "))
-resultado = potencia(num_ingresado, exponente_ingresado)
-print(f"{num_ingresado} elevado a la {exponente_ingresado} es {resultado}")
+print(suma_digitos(240))
+    
+
+
