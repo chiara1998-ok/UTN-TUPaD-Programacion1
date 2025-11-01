@@ -113,6 +113,50 @@ def suma_digitos(num):
 
 
 print(suma_digitos(240))
+
+
+
+#7
+
+
+
+def contar_bloques(n):
+
+    if n == 0:
+        return 0
+    else:
+        return contar_bloques(n-1) + n
+
+
+
+numero_bloque = int(input("Ingrese la cantidad de bloques: "))
+print(f"Total de bloques que necesita para construir toda la piramide : {contar_bloques(numero_bloque)}")
+
+
+
+#8
+
+
+
+def contar_digito(num, digito):
+
+    contador = 0
+
+    if num == 0:
+        return 0
+    else:
+        digito_anterior = num % 10
+        
+        if digito == digito_anterior:  
+                
+            return 1 + contar_digito(num//10,digito)
+        else:
+                
+            return contar_digito(num//10, digito)
+    
+
+
+print(contar_digito(5555,5))    
     
 
 
