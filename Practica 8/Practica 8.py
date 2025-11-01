@@ -41,4 +41,106 @@ with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\
 
 
 
-   
+
+#4
+
+with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt","r") as archivo:
+
+
+
+    contenido = archivo.readlines()
+    productos = []
+    for linea in contenido:
+        linea = linea.strip()
+        parte = linea.split(",")
+        producto = {"nombre": parte[0], "precio": parte[1], "cantidad": parte[2]}
+
+        productos.append(producto)
+
+print(productos)   
+
+
+
+#5
+
+with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt","r") as archivo:
+
+    contenido = archivo.readlines()
+    producto = input("Ingrese el nombre del producto a buscar: ")
+
+
+    for linea in contenido:
+
+        if producto in linea:
+            producto_encontrado = linea.strip().split(",")
+            print(f"Producto encontrado: {producto_encontrado[0]} | Precio: {producto_encontrado[1]} | Cantidad: {producto_encontrado[2]}")
+            break
+        else:
+            producto_encontrado = None
+
+    if producto_encontrado is None:
+        print("Producto no encontrado.")
+
+
+
+
+
+
+
+
+#6
+
+
+
+
+
+
+
+with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt","r") as archivo:
+
+    contenido = archivo.readlines()
+
+ 
+
+    
+    for linea in contenido:
+        linea = linea.strip()
+        parte = linea.split(",")
+    
+
+        print(parte)
+
+
+opcion = input("Desea agregar un nuevo producto? (s/n): ").lower()
+lista_productos = []
+
+while opcion != 'n':
+    nombre_nuevo = input("Ingrese el nombre del producto: ")
+    precio_nuevo = float(input("Ingrese el precio del producto: "))
+    cantidad_nueva = int(input("Ingrese la cantidad del producto: "))
+    lista_productos.append(f"{nombre_nuevo},{precio_nuevo},{cantidad_nueva}\n")
+
+    
+    
+
+    opcion = input("Desea agregar otro producto? (s/n): ").lower()
+
+    
+
+with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt", "w") as archivo:
+
+    for producto in lista_productos:
+        archivo.write(producto)
+
+print("Productos agregados correctamente.")
+
+for producto in lista_productos:
+    print(f"Producto agregado: {producto.strip()}")
+
+
+
+
+        
+  
+
+
