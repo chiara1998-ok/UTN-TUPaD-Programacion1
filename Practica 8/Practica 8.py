@@ -11,34 +11,34 @@ with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\
 
 
 
+
 #2
 
 
 with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt","r") as archivo:
-    contenido = archivo.readline()
-    linea1 = contenido.strip()
-    partes = linea1.split(",")
-    linea2 = archivo.readline()
-    linea2 = linea2.strip()
-    partes2 = linea2.split(",")
-    linea3 = archivo.readline()
-    linea3 = linea3.strip()
-    partes3 = linea3.split(",")
-    linea4 = archivo.readline()
-    linea4 = linea4.strip()
-    partes4 = linea4.split(",")
-    linea5 = archivo.readline()
-    linea5 = linea5.strip()
-    partes5 = linea5.split(",")
-    linea6 = archivo.readline()
-    linea6 = linea6.strip()
-    partes6 = linea6.split(",")
+
+
+
+    for linea in archivo:
+
+        contenido = linea.strip()
+        partes = contenido.split(",")
+        print(f"Producto: {partes[0]} | Precio: {partes[1]} | Cantidad: {partes[2]}")
 
 
 
 
-    print(f"Producto: {partes2[0]} | Precio: {partes2[1]} | Cantidad: {partes2[2]}")
-    print(f"Producto: {partes3[0]} | Precio: {partes3[1]} | Cantidad: {partes3[2]}")
-    print(f"Producto: {partes4[0]} | Precio: {partes4[1]} | Cantidad: {partes4[2]}")
-    print(f"Producto: {partes5[0]} | Precio: {partes5[1]} | Cantidad: {partes5[2]}")
-    print(f"Producto: {partes6[0]} | Precio: {partes6[1]} | Cantidad: {partes6[2]}")
+#3
+
+
+with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt","a") as archivo:
+
+    print(archivo)
+    producto_agregar = input("Ingrese el nombre del producto a agregar: ")
+    precio_agregar = input("Ingrese el precio del producto a agregar: ")
+    cantidad_agregar = input("Ingrese la cantidad del producto a agregar: ")
+    archivo.write(f"{producto_agregar},{precio_agregar},{cantidad_agregar}\n")
+
+
+
+   
