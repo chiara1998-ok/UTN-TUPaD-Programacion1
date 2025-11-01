@@ -1,0 +1,6 @@
+Nombre,Precio,Cantidad
+Manzana,1500,100
+Naranja,6000,80
+Plátano,1500,150
+Uva,3000,60
+Fresa,2000,40

@@ -1,3 +1,15 @@
+#1
+
+with open("C:\\Users\\ks249\\OneDrive\\Desktop\\facultad\\CLASES\\PROGRAMACION\\archivos\\productos.txt","w") as archivo:
+    archivo.write("Nombre,Precio,Cantidad\n")
+    archivo.write("Manzana,1500,100\n")
+    archivo.write("Naranja,6000,80\n")
+    archivo.write("Plátano,1500,150\n")
+    archivo.write("Uva,3000,60\n")
+    archivo.write("Fresa,2000,40\n")
+
+
+
 
 #2
 
