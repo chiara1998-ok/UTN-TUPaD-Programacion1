@@ -1,4 +1,4 @@
-📘 Descripción del Programa
+ Descripción del Programa
 
 Este programa permite gestionar, analizar y almacenar información sobre países utilizando estructuras de datos y técnicas fundamentales de programación en Python.
 
